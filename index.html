@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>Дневник фильмов</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="menu">
+                <p>Дневник<br> просмотренных <br> фильмов</p> <a href="index.html">Главная страница</a> <a href="kb.html">Личный кабинет</a>
+        </div>
+        <div class="content">
+            <div class="btn"><button href="index.html">Зарегестрироваться</button></div>
+            <div class="films" id="films">
+                <div class="film" id="film-1">
+                    <img src="https://m.media-amazon.com/images/M/MV5BZDA0OGQxNTItMDZkMC00N2UyLTg3MzMtYTJmNjg3Nzk5MzRiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_FMjpg_UX1000_.jpg" alt="Фильм" id="poster">
+                    <p id="Ava">Аватар</p>
+                    <script>
+                        document.getElementById("Ava").addEventListener("click", function() {
+                            window.location.href = "avatar.html";
+                        });
+                        </script>
+                    <div class="cart">
+                        <img src="pr.svg" alt="Просмотрено">
+                        <img src="pon.svg" alt="Понравилось">
+                    </div>
+                </div>
+                <div class="film" id="film-2">
+                    <img src="https://static.kinoafisha.info/k/movie_posters/1920x1080/upload/movie_posters/4/7/6/8167674/1fd9ea38f175567982c7829237923aa3.jpg" alt="Фильм" id="poster">
+                    <p id="Mars">Марсианин</p>
+                        <script>
+                        document.getElementById("Mars").addEventListener("click", function() {
+                            window.location.href = "mars.html";
+                        });
+                        </script>
+                    <div class="cart">
+                        <img src="pr.svg" alt="Просмотрено">
+                        <img src="pon.svg" alt="Понравилось">
+                    </div>
+                </div>
+                <div class="film" id="film-3">
+                    <img src="https://cdn1.ozone.ru/s3/multimedia-e/6386277782.jpg" alt="Фильм" id="poster">
+                    <p id="Dev">Девчата</p>
+                    <script>
+                        document.getElementById("Dev").addEventListener("click", function() {
+                            window.location.href = "dev.html";
+                        });
+                        </script>
+                    <div class="cart">
+                        <img src="pr.svg" alt="Просмотрено">
+                        <img src="pon.svg" alt="Понравилось">
+                    </div>
+                      
+                </div>
+            </div>
+            <div id="viewed-list">
+                <h2>Просмотренные фильмы</h2>
+                <div class="films"></div> </div>
+              <div id="liked-list">
+                <h2>Понравившиеся фильмы</h2>
+                <div class="films"></div> </div>
+        </div>
+        <div class="footer"> 
+            <div class="icon"><img src="vk.svg" alt="vk"><p>ссылка</p></div>
+            <div class="icon"><img src="youtube.svg" alt="youtube"><p>ссылка</p></div>
+            <div class="icon"><img src="inst.svg" alt="inst"><p>ссылка</p></div>
+            <div><p>По вопросам обращаться на почту: почта@gmail.com</p></div>
+            <div><p>Часто задаваемые вопросы(FAQ)</p></div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>

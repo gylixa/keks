@@ -1,0 +1,112 @@
+body {
+    background-color: #2C292E;
+    font-family: 'Font', sans-serif !important;
+}
+.menu {
+    background: url("менюю.svg");
+    width: 80%;
+    height: 5%;
+    display: flex; 
+    justify-content: space-around;
+    margin: auto;
+    align-items: center;
+    color: #ffffff;
+    font-size: 120%;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 130%;
+}
+
+.menu a:hover {
+    color: #8C26D0;
+    text-decoration: none;
+}
+
+.content {
+    width: 80%;
+    height: 100%;
+    background: url("Group 8.svg");
+    margin: auto;
+    text-align: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    color: #ffffff;
+}
+
+.films {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.film {
+    margin: 3%;
+}
+
+.film p {
+    font-size: 120%;
+}
+.film p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+img#poster {
+    height: 300px;
+    font-weight: bold;
+}
+
+.cart img{
+    margin-right: 15%;
+    margin-left: 15%;
+    cursor: pointer;
+}
+.footer {
+    height: 5%;
+    width: 80%;
+    background-color: #1C1A1D;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #ffffff;
+
+}
+.icon {
+    margin-left: 1%;
+    margin-top: 1%;
+    display: flex;
+}
+.footer p {
+    margin-left: 1%;
+}
+button {
+    margin: 5%;
+    background-color: #8C26D0;
+    border: 0px;
+    color: #ffffff;
+    font-size: 180%;
+    border-radius: 15px;
+    padding: 0.5%;
+}
+
+button:hover {
+    background-color: #6C1DA0;
+    border: 0px;
+    color: #C6C6C6;
+    font-size: 180%;
+    border-radius: 15px;
+    padding: 0.5%;
+}
+
+@font-face {
+    font-family: 'Font'; 
+    src: url('Ubuntu/Ubuntu-Medium.ttf') format('truetype'),
+        url('Ubuntu/Ubuntu-Regular.ttf') format('truetype'),
+        url('Ubuntu/Ubuntu-Light.ttf') format('truetype'),
+        url('Ubuntu/Ubuntu-Bold.ttf') format('truetype');
+  }
+
