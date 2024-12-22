@@ -24,7 +24,10 @@ body {
     color: #8C26D0;
     text-decoration: none;
 }
-
+.container {
+    margin-top: 20px;
+    color: #ffffff;
+}
 .content {
     width: 80%;
     height: 100%;
