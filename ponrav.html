@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просмотренные</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="menu">
+                <p>Дневник<br> просмотренных <br> фильмов</p> <a href="index.html">Главная страница</a> <a href="prosm.html">Просмотренные</a><a href="ponrav.html">Понравившиеся</a>
+        </div>
+
+    <div class="container">
+        <h1>Добавить Фильм</h1>
+        <form id="movieForm">
+            <div class="form-group">
+                <label for="title">Название фильма:</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="year">Год выпуска:</label>
+                <input type="number" class="form-control" id="year" name="year" required>
+            </div>
+            <div class="form-group">
+                <label for="country">Страна:</label>
+                <input type="text" class="form-control" id="country" name="country" required>
+            </div>
+             <div class="form-group">
+                <label for="genre">Жанр:</label>
+                <input type="text" class="form-control" id="genre" name="genre" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Краткое описание:</label>
+                <textarea class="form-control" id="description" name="description" required></textarea>
+            </div>
+             <div class="form-group">
+                <label for="review">Отзыв:</label>
+                <textarea class="form-control" id="review" name="review"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Добавить фильм</button>
+        </form>
+
+        <table class="table table-striped mt-4" id="movieTable">
+            <thead>
+                <tr>
+                    <th>Название</th>
+                    <th>Год выпуска</th>
+                    <th>Страна</th>
+                    <th>Жанр</th>
+                    <th>Краткое описание</th>
+                    <th>Отзыв</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+
+    </div>
+
+    <script src="forma.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
