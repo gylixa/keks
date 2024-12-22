@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const movieForm = document.getElementById('movieForm');
-    const movieTableBody = document.querySelector('#movieTable tbody');
-    const localStorageKey = 'movies';
+    const formId = document.getElementById('ponravMovieForm') ? 'ponravMovieForm' : 'prosmMovieForm'; // определяем ID формы
+    const tableId = document.getElementById('ponravMovieTable') ? 'ponravMovieTable' : 'prosmMovieTable'; // определяем ID таблицы
+    const localStorageKey = document.getElementById('ponravMovieForm') ? 'ponravMovies' : 'prosmMovies'; // разные ключи для localStorage
+
+    const movieForm = document.getElementById(formId);
+    const movieTableBody = document.querySelector(`#${tableId} tbody`);
+
 
     function loadMovies() {
         const storedMovies = localStorage.getItem(localStorageKey);
@@ -12,16 +16,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function addMovieToTable(movie) {
-        const newRow = document.createElement('tr');
-        newRow.innerHTML = `
-            <td>${movie.title}</td>
-            <td>${movie.year}</td>
-            <td>${movie.country}</td>
-            <td>${movie.genre}</td>
-            <td>${movie.description}</td>
-             <td>${movie.review}</td>
-        `;
-        movieTableBody.appendChild(newRow);
+        const newRow = movieTableBody.insertRow();
+        newRow.insertCell().textContent = movie.title;
+        newRow.insertCell().textContent = movie.year;
+        newRow.insertCell().textContent = movie.country;
+        newRow.insertCell().textContent = movie.genre;
+        newRow.insertCell().textContent = movie.description;
+        newRow.insertCell().textContent = movie.review;
     }
 
     function saveMovies() {
@@ -31,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 title: row.cells[0].textContent,
                 year: row.cells[1].textContent,
                 country: row.cells[2].textContent,
-                 genre: row.cells[3].textContent,
+                genre: row.cells[3].textContent,
                 description: row.cells[4].textContent,
                 review: row.cells[5].textContent
             };
@@ -51,12 +52,9 @@ document.addEventListener('DOMContentLoaded', function () {
         const description = document.getElementById('description').value;
         const review = document.getElementById('review').value;
 
-         const movie = { title, year, country, genre, description, review };
-         addMovieToTable(movie);
-
-
+        const movie = { title, year, country, genre, description, review };
+        addMovieToTable(movie);
         saveMovies();
-
         movieForm.reset();
     });
 });
