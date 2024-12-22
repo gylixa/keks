@@ -86,9 +86,12 @@ img#poster {
 .footer p {
     margin-left: 1%;
 }
+table {
+    color: #ffffff !important;
+}
 button {
     margin: 5%;
-    background-color: #8C26D0;
+    background-color: #8C26D0 !important;
     border: 0px;
     color: #ffffff;
     font-size: 180%;
@@ -97,7 +100,7 @@ button {
 }
 
 button:hover {
-    background-color: #6C1DA0;
+    background-color: #6C1DA0 !important;
     border: 0px;
     color: #C6C6C6;
     font-size: 180%;
